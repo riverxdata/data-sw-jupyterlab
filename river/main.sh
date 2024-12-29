@@ -4,4 +4,4 @@ if [ ! -f ~/.river/images/singularities/images/all-spark-notebook_latest.sif ]; 
 fi
 
 # run jupyter lab
-singularity run --writable --cleanenv <<river_home>>/.river/images/singularities/images/all-spark-notebook_latest.sif jupyter lab --NotebookApp.token='' --NotebookApp.base_url='/<<uuid_job_id>>' --port $PORT
+singularity run --writable --cleanenv <<river_home>>/.river/images/singularities/images/all-spark-notebook_latest.sif jupyter lab --NotebookApp.token='' --NotebookApp.base_url='/<<uuid_job_id>>' --port $PORT --NotebookApp.allow_origin='*'
